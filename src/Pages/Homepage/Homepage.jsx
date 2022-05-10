@@ -18,7 +18,7 @@ function Homepage() {
                   <img
                     src="https://res.cloudinary.com/dvbw8xujd/image/upload/v1652207173/istockphoto-696537216-612x612_bftymq.jpg"
                     className=" rounded-lg w-full h-96 bg-cover "
-                    alt="banner image"
+                    alt="banner-hero"
                   />
                 </div>
                 <div className="absolute top-1/4 left-0  p-2">
