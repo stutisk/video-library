@@ -9,13 +9,13 @@ function Navbar() {
               <div class="input-group relative flex items-stretch w-full mb-4">
                 <input
                   type="search"
-                  class=" rounded-l-full form-control relative flex-auto min-w-0 block w-full px-3 py-1.5 text-base font-normal text-slate-400 bg-white bg-clip-padding border border-solid border-gray-300  transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                  className=" rounded-l-full form-control relative flex-auto min-w-0 block w-full px-3 py-1.5 text-base font-normal text-slate-400 bg-white bg-clip-padding border border-solid border-gray-300  transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                   placeholder="Search"
                   aria-label="Search"
                   aria-describedby="button-addon2"
                 />
                 <button
-                  class="btn rounded-r-full inline-block px-6 py-2.5 bg-sky-500 text-white font-medium text-xs leading-tight uppercase  shadow-md  focus:bg-sky-500 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-sky-600 active:shadow-lg transition duration-150 ease-in-out flex items-center"
+                  className="btn rounded-r-full  px-6 py-2.5 bg-sky-500 text-white font-medium text-xs leading-tight uppercase  shadow-md  focus:bg-sky-500 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-sky-600 active:shadow-lg transition duration-150 ease-in-out flex items-center"
                   type="button"
                   id="button-addon2"
                 >
