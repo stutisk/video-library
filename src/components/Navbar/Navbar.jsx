@@ -1,4 +1,5 @@
 import { FiLogIn, MdNotifications } from "../Icons/Icons";
+import { Link } from "react-router-dom";
 function Navbar() {
   return (
     <nav className=" ">
@@ -15,7 +16,7 @@ function Navbar() {
                   aria-describedby="button-addon2"
                 />
                 <button
-                  className="btn rounded-r-full  px-6 py-2.5 bg-sky-500 text-white font-medium text-xs leading-tight uppercase  shadow-md  focus:bg-sky-500 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-sky-600 active:shadow-lg transition duration-150 ease-in-out flex items-center"
+                  className="btn rounded-r-full  px-6 py-2.5 bg-sky-500 text-white font-medium text-xs leading-tight uppercase  shadow-md  focus:bg-sky-500 focus:shadow-lg focus:outline-none focus:ring-0 hover:bg-sky-600 active:shadow-lg transition duration-150 ease-in-out flex items-center"
                   type="button"
                   id="button-addon2"
                 >
@@ -44,9 +45,11 @@ function Navbar() {
             <li className=" text-slate-50 hover:text-sky-500">
               <MdNotifications size={26} />
             </li>
+            <Link to="/login">
             <li className="text-slate-50 hover:text-sky-500">
               <FiLogIn size={26} />
             </li>
+            </Link>
           </ul>
         </div>
       </div>
