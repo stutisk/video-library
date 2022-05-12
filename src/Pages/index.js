@@ -4,6 +4,8 @@ import {Likedvideos} from "./Likedvideos/Likedvideos";
 import {Playlist} from "./Playlist/Playlist";
 import {Videolistingpage} from "./Videolistingpage/Videolistingpage";
 import { Watchlater } from "./Watchlater/Watchlater";
+import {Login} from "./Authpages/Login";
+import {Signup} from "./Authpages/Signup"
 
-export{Historypage,Homepage,Likedvideos, Playlist,Videolistingpage,Watchlater}
+export{Historypage,Homepage,Likedvideos, Playlist,Videolistingpage,Watchlater,Login,Signup}
 

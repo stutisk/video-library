@@ -13,11 +13,11 @@ function Homepage() {
           </div>
           <div className="absolute bottom-1 inset-x-1/4  p-2">
             
-            <button
+          <button
               type="button"
-              class="  inline-block px-6 py-2.5   text-slate-900 font-medium text-xl  bg-sky-500 rounded hover:bg-black  hover:text-slate-50 hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out"
+              class="  inline-block px-6 py-2.5   text-slate-900 font-medium text-xl  bg-sky-500 rounded hover:bg-sky-600  focus:ring-0 transition duration-150 ease-in-out"
             >
-              EXPLORE NOW
+            EXPLORE NOW
             </button>
           </div>
         </header>
