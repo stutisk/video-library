@@ -49,12 +49,12 @@ const Login = () => {
          
         </div>
         <div>
-             <a
+             <Link to=""
             class="inline-block   text-xl text-green-700  p-2"
-            href="#"
+           
           >
             Forgot Password?
-          </a>
+          </Link>
         </div>
         <div>
              <Link to ="/signup"
