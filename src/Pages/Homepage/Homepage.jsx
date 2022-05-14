@@ -1,4 +1,4 @@
-
+import {Categorycard} from "../../components/Cards/Categorycard"
 function Homepage() {
   return (
     <>
@@ -21,8 +21,9 @@ function Homepage() {
             </button>
           </div>
         </header>
-        <div className="text-slate-50 p-4 text-3xl ">
-          Categories
+        <div className="text-slate-50  ">
+          <p className="text-4xl underline underline-offset-8 my-8">Categories</p>
+          <Categorycard/>
          
         </div>
       </section>
