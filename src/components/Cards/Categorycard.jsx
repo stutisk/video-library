@@ -30,6 +30,7 @@ const Categorycard = () => {
           <img
             className="h-auto w-auto hover:opacity-50 "
             src={category.image}
+            alt={category.categoryName}
           />
         </div>
        
