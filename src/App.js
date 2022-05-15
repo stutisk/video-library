@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import { Sidebar } from "./components/Sidebar/Sidebar";
 import { Navbar } from "./components/Navbar/Navbar";
 import {Historypage,Homepage,Likedvideos, Playlist,Videolistingpage,Watchlater,Login,Signup} from "./Pages/index"
+import { Pagenotfound } from "./Pages/Pagenotfound/Pagenotfound";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
                   <Route path="/watchLater" element={<Watchlater />} />
                   <Route path="/login" element={<Login />} />
                   <Route path="/signup" element={<Signup />} />
+                  <Route path="/*" element={<Pagenotfound />} />
                 </Routes>
               </div>
             </div>
