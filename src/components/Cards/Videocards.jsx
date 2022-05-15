@@ -6,14 +6,14 @@ const Videocards = () => {
         <div>
           <img
             className="h-auto  "
-            src="https://i.ytimg.com/vi/5Eqb_-j3FDA/hqdefault.jpg?sqp=-oaymwEXCOADEI4CSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLDdRN1utUP-GsBpZe-QenMc94bEhg"
+            src="https://res.cloudinary.com/dvbw8xujd/image/upload/v1652634336/Chill1_ehleua.webp"
           />
         </div>
         <div className="flex p-2 gap-3">
           <div>
             <img
               className="  rounded-full"
-              src="https://yt3.ggpht.com/ytc/AKedOLQgZBVwLoQzZ7zoplPVeTtjBFKoAu4K_Dr9udB4xA=s68-c-k-c0x00ffffff-no-rj"
+              src="https://res.cloudinary.com/dvbw8xujd/image/upload/v1652634336/Chill_creator_qapxan.jpg"
             />
           </div>
           <div>
