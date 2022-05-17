@@ -2,7 +2,7 @@ import { IoIosArrowDropright } from "../../components/Icons/Icons";
 import { Link } from "react-router-dom";
 import { useRef, useEffect } from "react";
 import { useAuth } from "../../Context/AuthContext";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useLocation,useNavigate } from "react-router-dom";
 import axios from "axios";
 
 const Login = () => {
@@ -10,6 +10,7 @@ const Login = () => {
   const userpass = useRef();
   const navigate = useNavigate();
   const location = useLocation();
+  
 
   const { isLogin, setLogin, Error, setError } = useAuth();
 
@@ -44,12 +45,12 @@ const Login = () => {
     console.log(useremail.current.value);
   };
   useEffect(() => {
-    if (isLogin && location?.state?.from?.pathname) {
+    if (isLogin && location.state?.from.pathname) {
       navigate(location.state.from.pathname);
     } else if (isLogin) {
       navigate("/");
     }
-  }, []);
+  }, [isLogin,location.state.from.pathname,navigate]);
   return (
     <section className="pl-60 pt-5">
       <div class="w-full max-w-sm ">
