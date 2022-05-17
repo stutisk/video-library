@@ -2,7 +2,20 @@ import MockAPI from "./components/Mockman/Mockman";
 import { Routes, Route } from "react-router-dom";
 import { Sidebar } from "./components/Sidebar/Sidebar";
 import { Navbar } from "./components/Navbar/Navbar";
-import {Historypage,Homepage,Likedvideos, Playlist,Videolistingpage,Watchlater,Login,Signup} from "./Pages/index"
+import {
+  Historypage,
+  Homepage,
+  Likedvideos,
+  Playlist,
+  Videolistingpage,
+  Watchlater,
+  Login,
+  Signup,
+  Userpage,
+  Logout
+} from "./Pages/index";
+import { Pagenotfound } from "./Pages/Pagenotfound/Pagenotfound";
+import { RequiresAuth } from "./RequiresAuth/RequiresAuth";
 
 function App() {
   return (
@@ -21,14 +34,55 @@ function App() {
                 <Routes>
                   <Route path="/" element={<Homepage />} />
                   <Route path="/mock" element={<MockAPI />} />
-                  <Route path="/history" element={<Historypage />} />
-                  <Route path="/likedVideos" element={<Likedvideos />} />
-                  <Route path="/playlist" element={<Playlist />} />
                   <Route path="/videoList" element={<Videolistingpage />} />
-                  <Route path="/watchLater" element={<Watchlater />} />
                   <Route path="/login" element={<Login />} />
                   <Route path="/signup" element={<Signup />} />
+                  <Route path="/logout" element={<Logout />} />
+                  <Route path="/*" element={<Pagenotfound />} />
+
+                  <Route
+                    path="/history"
+                    element={
+                      <RequiresAuth>
+                        <Historypage />
+                      </RequiresAuth>
+                    }
+                  />
+                  <Route
+                    path="/likedVideos"
+                    element={
+                      <RequiresAuth>
+                        <Likedvideos />
+                      </RequiresAuth>
+                    }
+                  />
+                  <Route
+                    path="/playlist"
+                    element={
+                      <RequiresAuth>
+                        <Playlist />
+                      </RequiresAuth>
+                    }
+                  />
+                  <Route
+                    path="/watchLater"
+                    element={
+                      <RequiresAuth>
+                        <Watchlater />
+                      </RequiresAuth>
+                    }
+                  />
+                  <Route
+                    path="/userpage"
+                    element={
+                      <RequiresAuth>
+                        <Userpage />
+                      </RequiresAuth>
+                    }
+                  />
                 </Routes>
+                
+               
               </div>
             </div>
           </div>

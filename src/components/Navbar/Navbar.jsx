@@ -1,4 +1,4 @@
-import { FiLogIn, MdNotifications } from "../Icons/Icons";
+import { FiLogIn, MdNotifications,FaUserAlt } from "../Icons/Icons";
 import { Link } from "react-router-dom";
 function Navbar() {
   return (
@@ -50,6 +50,12 @@ function Navbar() {
               <FiLogIn size={26} />
             </li>
             </Link>
+            <Link to="/userpage">
+            <li className="text-slate-50 hover:text-sky-500">
+              <FaUserAlt  size={26} />
+            </li>
+            </Link>
+           
           </ul>
         </div>
       </div>
