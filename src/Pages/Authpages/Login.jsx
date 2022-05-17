@@ -1,6 +1,6 @@
 import {IoIosArrowDropright} from "../../components/Icons/Icons"
 import { Link } from "react-router-dom";
-import { useRef,useEffect,useState } from "react";
+import { useRef,useEffect } from "react";
 import { useAuth } from "../../Context/AuthContext";
 import { useNavigate, useLocation } from "react-router-dom";
 import axios from "axios";
@@ -23,15 +23,15 @@ const Login = () => {
     setLogin(true);
     console.log(response)
     console.log(response.data.error)
-    const userDetail = {
-      Email: response.data.foundUser.email,
-      name:
-        response.data.foundUser.firstName +
-        " " +
-        response.data.foundUser.lastName,
-    };
+    // const userDetail = {
+    //   Email: response.data.foundUser.email,
+    //   name:
+    //     response.data.foundUser.firstName +
+    //     " " +
+    //     response.data.foundUser.lastName,
+    // };
     localStorage.setItem("token", response.data.encodedToken);
-    localStorage.setItem("user", JSON.stringify(userDetail));
+    // localStorage.setItem("user", JSON.stringify(userDetail));
   } 
   catch (error) {
     console.log( error.response.data.errors[0] )
