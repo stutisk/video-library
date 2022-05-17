@@ -33,8 +33,9 @@ const Login = () => {
       localStorage.setItem("token", response.data.encodedToken);
       localStorage.setItem("user", JSON.stringify(userDetail));
     } catch (error) {
-      console.log(error.response.data.errors[0]);
-      setError({ error: error.response.data.errors[0] });
+      console.log(error)
+      // console.log(error.response.data.errors[0]);
+      // setError({ error: error.response.data.errors[0] });
     }
   };
   const guestLogin = () => {
@@ -52,7 +53,7 @@ const Login = () => {
     }
   }, [isLogin,location.state.from.pathname,navigate]);
   return (
-    <section classNameName="pl-60 pt-5">
+    <section className="pl-60 pt-5">
       <div className="w-full max-w-sm ">
         <form className="  border-2 border-sky-500 shadow shadow-sky-500 rounded px-3 pt-6 pb-8 mb-4 ">
           <div className="mb-4">
