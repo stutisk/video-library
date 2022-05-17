@@ -38,7 +38,7 @@ function Sidebar() {
             <li className="py-4 flex flex-row gap-4 cursor-pointer group hover:text-slate-50">
               {" "}
               <span className="group-hover:bg-sky-500 rounded-lg p-1">
-                <MdOutlineFeaturedPlayList size={26} />{" "}
+                <MdOutlineFeaturedPlayList size={26} />
               </span>
               Playlist
             </li>
