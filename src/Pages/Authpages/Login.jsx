@@ -12,7 +12,7 @@ const Login = () => {
   const location = useLocation();
   
 
-  const { isLogin, setLogin, Error, setError } = useAuth();
+  const { isLogin, setLogin, Error } = useAuth();
 
   const loginHandler = async () => {
     try {
