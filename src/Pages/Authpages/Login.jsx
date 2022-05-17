@@ -12,7 +12,7 @@ const Login = () => {
   const location = useLocation();
   
 
-  const { isLogin, setLogin, Error } = useAuth();
+  const { isLogin, setLogin, Error,setError } = useAuth();
 
   const loginHandler = async () => {
     try {
@@ -34,8 +34,8 @@ const Login = () => {
       localStorage.setItem("user", JSON.stringify(userDetail));
     } catch (error) {
       console.log(error)
-      // console.log(error.response.data.errors[0]);
-      // setError({ error: error.response.data.errors[0] });
+      console.log(error.response.data.errors[0]);
+      setError({ error: error.response.data.errors[0] });
     }
   };
   const guestLogin = () => {
@@ -51,7 +51,7 @@ const Login = () => {
     } else if (isLogin) {
       navigate("/");
     }
-  }, [isLogin,location.state.from.pathname,navigate]);
+  }, [isLogin]);
   return (
     <section className="pl-60 pt-5">
       <div className="w-full max-w-sm ">
