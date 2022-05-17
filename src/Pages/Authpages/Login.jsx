@@ -22,7 +22,7 @@ const Login = () => {
       });
       setLogin(true);
       console.log(response);
-      console.log(response.data.error);
+     
       const userDetail = {
         Email: response.data.foundUser.email,
         name:
