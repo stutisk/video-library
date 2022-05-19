@@ -1,15 +1,14 @@
-const getFilterVideos = (data, categories) => {
+const getFilterVideos = (videos, categories) => {
   if (categories === "All") {
-    return data;
+    return videos;
   }
-  // return data.filter((item) => categories.includes(item.categories));
-  return data = categories.length
-  ? [
-      ...data.filter((product) =>
-        categories.includes(product.categories)
-      ),
-    ]
-  : [...data];
+ 
+ else {
+  let filteredData = categories.length?[...videos.filter((video) => categories.includes(video.categoryName))] : [...videos]
+  return [...filteredData]
+ }
+  
+ 
 };
 
 export { getFilterVideos };
