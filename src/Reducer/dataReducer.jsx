@@ -7,6 +7,8 @@ const dataReducer = (state, action) => {
     case "SUCCESS_VIDEOS":{
       return { ...state, videos:action.payload };
     }
+    case "SELECT_CATEGORY":
+      return { ...state, categorySelected: action.payload };
     default:
       return state;
   }

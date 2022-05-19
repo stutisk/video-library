@@ -5,9 +5,8 @@ import { Link } from "react-router-dom";
 const Categorycard = () => {
  
   const {
-    state: { categories},
-   
-  } = useData();
+    state: { categories},dispatch
+  } = useData();;
 
 
 
@@ -22,6 +21,12 @@ const Categorycard = () => {
                   className="h-auto w-auto hover:opacity-50 "
                   src={category.image}
                   alt={category.categoryName}
+                  onClick={() =>
+                    dispatch({
+                      type: "SELECT_CATEGORY",
+                      payload: category.categoryName,
+                    })
+                  }
                 />
               </div>
 

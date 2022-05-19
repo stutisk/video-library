@@ -10,8 +10,7 @@ const useData = () => useContext(DataContext);
 const initialState = {
   categories: [], 
   videos:[],
-  categoryBy: "",
-  categorySelected:"",
+  categorySelected:"All",
 };
 
 
