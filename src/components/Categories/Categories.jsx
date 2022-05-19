@@ -3,10 +3,10 @@ const Categories = () => {
   const {
     state: { categories},dispatch
   } = useData();
-  
+
   console.log(categories);
   return (
-    <div>
+    <div className="flex gap-8 text-slate-50 font-medium text-2xl">
        <button
             className="border-2  border-sky-500  shadow   shadow-sky-500 px-6 py-1 rounded-full "      
             onClick={() =>
