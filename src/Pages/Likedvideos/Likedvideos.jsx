@@ -1,6 +1,6 @@
 function Likedvideos () {
     return(
-        <div>There are no playlists. Explore videos to create and add videso to playlists! </div>
+        <div>There are no Liked videos . Explore videos to Add them! </div>
     )
 }
 

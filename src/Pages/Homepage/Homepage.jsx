@@ -1,5 +1,7 @@
 import {Categorycard} from "../../components/Cards/Categorycard"
+
 function Homepage() {
+  
   return (
     <>
       <section>
