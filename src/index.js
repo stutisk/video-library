@@ -3,8 +3,10 @@ import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 import { makeServer } from "./server";
-import{AuthProvider} from "./Context/AuthContext"
-import {DataProvider} from "./Context/dataContext"
+import { AuthProvider } from "./Context/AuthContext";
+import { DataProvider } from "./Context/dataContext";
+import { LikeProvider } from "./Context/LikeContext";
+import { WatchProvider } from "./Context/WatchContext";
 
 // Call make Server
 makeServer();
@@ -12,11 +14,15 @@ makeServer();
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-    <DataProvider>
-      <AuthProvider>
-        <App />
-      </AuthProvider>
-      </DataProvider>
+      <WatchProvider>
+        <LikeProvider>
+          <DataProvider>
+            <AuthProvider>
+              <App />
+            </AuthProvider>
+          </DataProvider>
+        </LikeProvider>
+      </WatchProvider>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")

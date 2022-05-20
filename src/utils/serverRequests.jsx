@@ -10,6 +10,7 @@ import axios from "axios";
           console.log(error);
         }
       }
+
       const getVideos = async (dispatch) => {
         try {
           const res = await axios.get("/api/videos");
@@ -21,6 +22,9 @@ import axios from "axios";
         }
       }
     
+  
+
+   
  
 
   export {getCategories,getVideos}
