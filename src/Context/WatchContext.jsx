@@ -38,6 +38,8 @@ const WatchProvider = ({ children }) => {
     }
   };
   
+
+
   const [watchList, setwatchList] = useState([]);
   console.log(watchList);
 

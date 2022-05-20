@@ -7,8 +7,9 @@ import { useLike } from "../../Context/LikeContext";
 import { useWatch } from "../../Context/WatchContext";
 
 const Videocards = ({ video }) => {
-  const { getLikedVideos, list ,DeleteVideos} = useLike();
-  const { getWatchedVideos,watchList,DeleteWatchLater } = useWatch();
+  const { getLikedVideos, list, DeleteVideos } = useLike();
+  const { getWatchedVideos, watchList, DeleteWatchLater } = useWatch();
+
 
   return (
     <div>
@@ -30,29 +31,35 @@ const Videocards = ({ video }) => {
           </div>
           <div className="flex gap-2">
             {list.some((p) => p.id === video.id) ? (
-              <span  className="text-sky-500 "  onClick={() => DeleteVideos(video)}>
+              <span
+                className="text-sky-500 "
+                onClick={() => DeleteVideos(video)}
+              >
                 <BiLike />
               </span>
             ) : (
-              <span  onClick={() => getLikedVideos(video)}>
-            <BiLike  />    
+              <span onClick={() => getLikedVideos(video)}>
+                <BiLike />
+              </span>
+            )}
+            {watchList.some((p) => p.id === video.id) ? (
+              <span
+                className="text-sky-500 "
+                onClick={() => DeleteWatchLater(video)}
+              >
+                <MdWatchLater />
+              </span>
+            ) : (
+              <span onClick={() => getWatchedVideos(video)}>
+                <MdWatchLater />
               </span>
             )}
 
-            {watchList.some((p) => p.id === video.id) ? (
-              
-            <span  className="text-sky-500 "  onClick={() => DeleteWatchLater(video)}>
-            <MdWatchLater />
-          </span>
-            ) : (
-              
-            <span onClick={() => getWatchedVideos(video)}>
-            <MdWatchLater />
-          </span>
-            )}
-
-            
+            <span  >
             <MdOutlineFeaturedPlayList />
+            </span>
+           
+            
           </div>
         </div>
         <div className="flex place-content-between tracking-wide text-base">
