@@ -16,6 +16,7 @@ import {
 } from "./Pages/index";
 import { Pagenotfound } from "./Pages/Pagenotfound/Pagenotfound";
 import { RequiresAuth } from "./RequiresAuth/RequiresAuth";
+import { SingleVideoPage } from "./Pages/SingleVideoPage/SingleVideoPage";
 
 function App() {
   return (
@@ -77,6 +78,14 @@ function App() {
                     element={
                       <RequiresAuth>
                         <Userpage />
+                      </RequiresAuth>
+                    }
+                  />
+                    <Route
+                    path="/singlevideopage"
+                    element={
+                      <RequiresAuth>
+                        <SingleVideoPage />
                       </RequiresAuth>
                     }
                   />

@@ -5,6 +5,7 @@ import {
 } from "../Icons/Icons";
 import { useLike } from "../../Context/LikeContext";
 import { useWatch } from "../../Context/WatchContext";
+import { NavLink } from "react-router-dom";
 
 const Videocards = ({ video }) => {
   const { getLikedVideos, list, DeleteVideos } = useLike();
@@ -13,6 +14,7 @@ const Videocards = ({ video }) => {
 
   return (
     <div>
+      <NavLink to="/singlevideopage">
       <div className="w-72  hover:bottom-4 shadow hover:shadow-md  shadow-sky-500  hover:shadow-sky-600 rounded cursor-pointer ">
         <div>
           <img
@@ -67,6 +69,7 @@ const Videocards = ({ video }) => {
           <div>{video.date}</div>
         </div>
       </div>
+      </NavLink>
     </div>
   );
 };
