@@ -1,17 +1,27 @@
-import React from 'react'
- const Playlistcard = ({ playlist }) => {
+import React from "react";
+import { MdOutlineDelete, MdOutlinePlaylistAdd } from "../Icons/Icons";
+import { usePlaylist } from "../../Context/PlaylistContext";
+const Playlistcard = ({ playlist }) => {
+  const { DeletePlaylist } = usePlaylist();
 
-    return (
-      <div>
-        <div className="w-72  hover:bottom-4 shadow hover:shadow-md  shadow-sky-500  hover:shadow-sky-600 rounded cursor-pointer ">  
-           
-           
-              
-            </div>
-     </div>  
-      
-    );
-  };
-  
-  export { Playlistcard };
-  
+  return (
+    <div>
+      <div className="  w-72  border-2 border-sky-500   shadow shadow-sky-500 rounded px-1 pt-6 pb-6 mb-4 ">
+        <button>
+          <MdOutlinePlaylistAdd size={80} />
+        </button>
+        <h1>Add Videos</h1>
+        <div className="flex flex-row justify-between mt-10  " >
+          <div className="">{playlist.title}</div>
+          <div className="mt-1 cursor-pointer text-rose-900 ">
+            <button onClick={() => DeletePlaylist(playlist._id)}>
+              <MdOutlineDelete size={30} />{" "}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export { Playlistcard };

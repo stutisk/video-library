@@ -1,7 +1,7 @@
 import {
   BiLike,
   MdWatchLater,
-  MdOutlineFeaturedPlayList,
+  
 } from "../Icons/Icons";
 import { useLike } from "../../Context/LikeContext";
 import { useWatch } from "../../Context/WatchContext";
@@ -9,7 +9,7 @@ import { useWatch } from "../../Context/WatchContext";
 const Videocards = ({ video }) => {
   const { getLikedVideos, list, DeleteVideos } = useLike();
   const { getWatchedVideos, watchList, DeleteWatchLater } = useWatch();
-
+ 
 
   return (
     <div>
@@ -54,12 +54,7 @@ const Videocards = ({ video }) => {
                 <MdWatchLater />
               </span>
             )}
-
-            <span  >
-            <MdOutlineFeaturedPlayList />
-            </span>
            
-            
           </div>
         </div>
         <div className="flex place-content-between tracking-wide text-base">

@@ -23,7 +23,7 @@ const PlaylistModal = () => {
       class=" overflow-y-auto overflow-x-hidden fixed  z-50  h-modal md:h-full"
     >
       <div class="relative p-4 w-full max-w-lg h-full md:h-auto">
-        <div class="relative  border-2 border-sky-500 shadow shadow-sky-500 rounded px-3 pt-6 pb-8 mb-4 ">
+        <div class="relative bg-slate-900 border-2 border-sky-500 shadow shadow-sky-500 rounded px-3 pt-6 pb-8 mb-4 ">
           <button
             type="button"
             class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white"
