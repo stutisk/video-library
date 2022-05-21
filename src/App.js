@@ -16,6 +16,8 @@ import {
 } from "./Pages/index";
 import { Pagenotfound } from "./Pages/Pagenotfound/Pagenotfound";
 import { RequiresAuth } from "./RequiresAuth/RequiresAuth";
+import { ToastContainer } from 'react-toastify';
+import "react-toastify/ReactToastify.min.css";
 
 function App() {
   return (
@@ -80,9 +82,10 @@ function App() {
                       </RequiresAuth>
                     }
                   />
+                  
                 </Routes>
                 
-               
+                <ToastContainer position="bottom-left" autoClose={1000} />
               </div>
             </div>
           </div>
