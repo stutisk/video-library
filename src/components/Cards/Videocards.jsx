@@ -23,7 +23,7 @@ const Videocards = ({ video }) => {
         </div>
         <div className="flex p-2 gap-3">
           <div>
-            <img className="  rounded-full" src={video.creator} />
+            <img className="  rounded-full" src={video.creator} alt ={video.categoryName} />
           </div>
           <div>
             {" "}

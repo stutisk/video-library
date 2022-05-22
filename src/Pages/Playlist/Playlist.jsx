@@ -7,9 +7,9 @@ function Playlist() {
   const { setModal, modal, playlist } = usePlaylist();
 
   const showModal = () => {
-    {
+    
       setModal(true) && <PlaylistModal />;
-    }
+    
   };
 
   return (

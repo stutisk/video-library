@@ -54,7 +54,7 @@ useEffect(() => {
   } else if (isLogin) {
     navigate("/");
   }
-},  [isLogin]);
+},  [isLogin,location.state.from.pathname,navigate]);
 
   return (
       <section className="pl-60 ">
