@@ -23,7 +23,7 @@ export const videos = [
       "https://res.cloudinary.com/dvbw8xujd/image/upload/v1652635112/chill2_muxpli.webp",
     creator:
       "https://res.cloudinary.com/dvbw8xujd/image/upload/v1652635111/chill2_creator_visoxw.jpg",
-    title: "Pasoori ,Coke Studio",
+    title: "Pasoori ,Coke Studio  Ali Sethi x Shae Gill",
     views:"119,897,640",
     date: " Feb 7, 2022 ",
     description:"Coke Studio | Season 14 | Pasoori | Ali Sethi x Shae Gill"
@@ -37,7 +37,7 @@ export const videos = [
       "https://res.cloudinary.com/dvbw8xujd/image/upload/v1652635708/workout1_f2kb4k.webp",
     creator:
       "https://res.cloudinary.com/dvbw8xujd/image/upload/v1652635706/w-2_c_jaztgy.jpg",
-    title: "Top workout songs |Hindi",
+    title: "Top workout songs |Hindi | Gym motivation ",
     views:"9,019,828",
     date: "Aug 21, 2020 ",
     description:"Best workout music | Top workout songs | Gym motivation songs"
@@ -65,7 +65,7 @@ export const videos = [
       "https://res.cloudinary.com/dvbw8xujd/image/upload/v1652636190/f-1_ssakqa.webp",
     creator:
       "https://res.cloudinary.com/dvbw8xujd/image/upload/v1652636190/fc2_r8gjn4.jpg",
-    title: "Ambient Study Music ",
+    title: "Ambient Study Music To Concentrate",
     views:"53,746,537",
     date: "Dec 28, 2018 ",
     description:"Ambient Study Music To Concentrate - 4 Hours of Music for Studying, Concentration and Memory"

@@ -1,26 +1,23 @@
+import { Videocards } from "../../components/Cards/Videocards";
+import { Categories } from "../../components/Categories/Categories";
+import { useData } from "../../Context/dataContext";
+import { getFilterVideos } from "../../utils/getFilterVideos";
 
-import {Videocards} from "../../components/Cards/Videocards"
 function Videolistingpage() {
+  const {
+    state: { videos, categorySelected },
+  } = useData();
+  const filteredVideos = getFilterVideos(videos, categorySelected);
   return (
-    
-      <div>
-        <div className="flex gap-8 text-slate-50 font-medium text-xl">
-          <button className="border-2  border-sky-500  shadow   shadow-sky-500 px-6 py-1 rounded-full">
-            All
-          </button>
-          <button className="border-2  border-sky-500  shadow   shadow-sky-500 px-6 py-2.5 rounded-full" >Chill</button>
-          <button className="border-2  border-sky-500  shadow   shadow-sky-500 px-6 py-2.5 rounded-full" >Focus</button>
-          <button className="border-2  border-sky-500  shadow   shadow-sky-500 px-6 py-2.5 rounded-full" >Feel Good</button>
-          <button className="border-2  border-sky-500  shadow   shadow-sky-500 px-6 py-2.5 rounded-full" >Sleep</button>
-          <button className="border-2  border-sky-500  shadow   shadow-sky-500 px-6 py-2.5 rounded-full" >Party</button>
-        </div>
-        <div className="flex flex-row flex-wrap  gap-10 p-4 justify-center ">
-<Videocards/><Videocards/><Videocards/><Videocards/><Videocards/><Videocards/><Videocards/>
+    <>
+      <Categories />
 
-        </div>
+      <div className="flex flex-row flex-wrap  gap-10 p-4 justify-center ">
+        {filteredVideos.map((videos) => (
+          <Videocards video={videos} key={videos._id} />
+        ))}
       </div>
-
-   
+    </>
   );
 }
 

@@ -1,46 +1,68 @@
-import {BiLike,MdWatchLater,MdOutlineFeaturedPlayList } from "../Icons/Icons"
-const Videocards = () => {
+import {
+  BiLike,
+  MdWatchLater,
+  
+} from "../Icons/Icons";
+import { useLike } from "../../Context/LikeContext";
+import { useWatch } from "../../Context/WatchContext";
+
+const Videocards = ({ video }) => {
+  const { getLikedVideos, list, DeleteVideos } = useLike();
+  const { getWatchedVideos, watchList, DeleteWatchLater } = useWatch();
+ 
+
   return (
-    
-      <div className="w-72 border-2 hover:bottom-4 border-sky-500  shadow hover:shadow-md  shadow-sky-500  hover:shadow-sky-600 rounded cursor-pointer ">
+    <div>
+      <div className="w-72  hover:bottom-4 shadow hover:shadow-md  shadow-sky-500  hover:shadow-sky-600 rounded cursor-pointer ">
         <div>
           <img
             className="h-auto  "
-            src="https://res.cloudinary.com/dvbw8xujd/image/upload/v1652634336/Chill1_ehleua.webp"
+            src={video.image}
+            alt={video.categoryName}
           />
         </div>
         <div className="flex p-2 gap-3">
           <div>
-            <img
-              className="  rounded-full"
-              src="https://res.cloudinary.com/dvbw8xujd/image/upload/v1652634336/Chill_creator_qapxan.jpg"
-            />
+            <img className="  rounded-full" src={video.creator} alt ={video.categoryName} />
           </div>
           <div>
             {" "}
-            <p className=" tracking-wide text-base text-left">
-              Sad Songs | Hindi | Loneliness 
-            </p>
+            <p className=" tracking-wide text-base text-left">{video.title}</p>
           </div>
           <div className="flex gap-2">
-          <BiLike/>
-          <MdWatchLater/>
-          <MdOutlineFeaturedPlayList/>
+            {list.some((p) => p.id === video.id) ? (
+              <span
+                className="text-sky-500 "
+                onClick={() => DeleteVideos(video)}
+              >
+                <BiLike />
+              </span>
+            ) : (
+              <span onClick={() => getLikedVideos(video)}>
+                <BiLike />
+              </span>
+            )}
+            {watchList.some((p) => p.id === video.id) ? (
+              <span
+                className="text-sky-500 "
+                onClick={() => DeleteWatchLater(video)}
+              >
+                <MdWatchLater />
+              </span>
+            ) : (
+              <span onClick={() => getWatchedVideos(video)}>
+                <MdWatchLater />
+              </span>
+            )}
+           
           </div>
-         
-          
-          
         </div>
         <div className="flex place-content-between tracking-wide text-base">
-              <div>3M views</div>
-              <div>june 17, 2000</div>
-          </div>
-        
+          <div>{video.views}views</div>
+          <div>{video.date}</div>
+        </div>
       </div>
-
-     
-
-   
+    </div>
   );
 };
 

@@ -4,7 +4,11 @@ import { useRef, useEffect } from "react";
 import { useAuth } from "../../Context/AuthContext";
 import { useLocation,useNavigate } from "react-router-dom";
 import axios from "axios";
+import { toast } from "react-toastify";
 
+const notify = (message) => {
+    toast(message)   
+} 
 const Login = () => {
   const useremail = useRef();
   const userpass = useRef();
@@ -21,6 +25,7 @@ const Login = () => {
         password: userpass.current.value,
       });
       setLogin(true);
+      notify("Login Successful");
       console.log(response);
      
       const userDetail = {

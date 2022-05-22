@@ -4,6 +4,10 @@ import {useRef,useEffect} from "react";
 import axios  from "axios";
 import { useAuth } from "../../Context/AuthContext";
 import { useLocation,useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+const notify = (message) => {
+  toast(message)   
+}
 
 const Signup = () => {
   const useremail = useRef();
@@ -24,6 +28,7 @@ const signupHandler = async() => {
       password: userpass.current.value,
     });
     setLogin(true);
+    notify("Signup Successful");
     console.log(response);
     const userDetail = {
       Email: response.data.createdUser.email,
@@ -49,7 +54,7 @@ useEffect(() => {
   } else if (isLogin) {
     navigate("/");
   }
-}, );
+},  [isLogin,location.state.from.pathname,navigate]);
 
   return (
       <section className="pl-60 ">
