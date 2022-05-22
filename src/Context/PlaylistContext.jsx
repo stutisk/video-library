@@ -6,8 +6,6 @@ const notify = (message) => {
   toast(message)   
 }
 
-
-
 const PlaylistContext = createContext();
 const usePlaylist = () => useContext(PlaylistContext);
 console.log("hey");
@@ -46,18 +44,26 @@ const PlaylistProvider = ({ children }) => {
     }
   };
   
-
-  useEffect(async () => {
-    try {
-      const res = await axios.get(`/api/user/playlists`, {
+ const Playlist =async() => {
+  try {
+    const res = await axios.get(
+      `/api/user/playlists`,
+      
+      {
         headers: { authorization: localStorage.getItem("token") },
-      });
-      console.log(res)
-      setPlaylist(res);
-    } catch (error) {
-      console.log(error);
-    }
-  }, []);
+      }
+    );
+    console.log("Playlist",res.data);
+    setPlaylist(res.data);
+  } catch (error) {
+    console.log(error);
+  }
+ }
+ useEffect(() => {
+  Playlist(); 
+}, [])
+ 
+
  
   const DeletePlaylist = async (id) => {
     try {
@@ -81,7 +87,7 @@ const PlaylistProvider = ({ children }) => {
   const [modal, setModal] = useState(false);
   const [playlist, setPlaylist] = useState([]);
   const[oneplaylist,setPlaylistOne]=useState([])
-  console.log(playlist)
+
  
 
   return (
