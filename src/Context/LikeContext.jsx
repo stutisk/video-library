@@ -1,6 +1,11 @@
 import { createContext } from "react";
 import { useContext, useState } from "react";
 import axios from "axios";
+import { toast } from "react-toastify";
+const notify = (message) => {
+  toast(message)   
+}
+
 
 const LikeContext = createContext();
 const useLike = () => useContext(LikeContext);
@@ -16,6 +21,7 @@ const LikeProvider = ({ children }) => {
           headers: { authorization: localStorage.getItem("token") },
         }
       );
+      notify("You liked the video");
       console.log(res.data.likes);
       setList(res.data.likes);
     } catch (error) {
@@ -32,6 +38,7 @@ const LikeProvider = ({ children }) => {
           headers: { authorization: localStorage.getItem("token") },
         }
       );
+      notify("You unliked the video");
       console.log(res.data);
       setList(res.data.likes);
     } catch (error) {

@@ -1,6 +1,11 @@
 import { createContext } from "react";
 import { useContext, useState } from "react";
 import axios from "axios";
+import { toast } from "react-toastify";
+const notify = (message) => {
+  toast(message)   
+}
+
 
 const WatchContext = createContext();
 const useWatch = () => useContext(WatchContext);
@@ -16,6 +21,7 @@ const WatchProvider = ({ children }) => {
           headers: { authorization: localStorage.getItem("token") },
         }
       );
+      notify("Added To Watch Later");
       console.log("watch later",res.data.watchlater);
       setwatchList(res.data.watchlater);
     } catch (error) {
@@ -31,6 +37,7 @@ const WatchProvider = ({ children }) => {
           headers: { authorization: localStorage.getItem("token") },
         }
       );
+      notify("Removed From Watch Later");
       console.log("watch  delete later",res.data.watchlater);
       setwatchList(res.data.watchlater);
     } catch (error) {
@@ -38,6 +45,8 @@ const WatchProvider = ({ children }) => {
     }
   };
   
+
+
   const [watchList, setwatchList] = useState([]);
   console.log(watchList);
 
