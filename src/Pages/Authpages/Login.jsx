@@ -111,7 +111,7 @@ const Login = () => {
             <Link
               to="/signup"
               className=" flex gap-2  place-content-center  text-xl text-slate-50 p-2"
-              href="#"
+            
             >
               Create New Account
               <IoIosArrowDropright size={26} />
