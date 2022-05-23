@@ -20,7 +20,7 @@ const PlaylistModal = () => {
       id="authentication-modal"
       tabindex="-1"
       aria-hidden="true"
-      class=" overflow-y-auto overflow-x-hidden fixed  z-50  h-modal md:h-full"
+      class=" overflow-y-auto overflow-x-hidden fixed  z-50  h-modal md:h-full inset-y-1/4"
     >
       <div class="relative p-4 w-full max-w-lg h-full md:h-auto">
         <div class="relative bg-slate-900 border-2 border-sky-500 shadow shadow-sky-500 rounded px-3 pt-6 pb-8 mb-4 ">

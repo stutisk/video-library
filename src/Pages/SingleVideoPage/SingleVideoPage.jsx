@@ -2,64 +2,77 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { singleVideo } from "../../utils/serverRequests";
 import ReactPlayer from "react-player";
-import { BiLike, MdOutlinePlaylistAdd} from "../../components/Icons/Icons";
+import { BiLike, MdOutlinePlaylistAdd } from "../../components/Icons/Icons";
 import { VideoNotes } from "../../components/VideoNotes/VideoNotes";
-
+import { useLike } from "../../Context/LikeContext";
+import { usePlaylist } from "../../Context/PlaylistContext";
+import { PlaylistModal } from "../../components/PlaylistModal/PlaylistModal";
 
 import axios from "axios";
 
 const SingleVideoPage = () => {
   const { videoId } = useParams();
   const [video, setVideo] = useState({});
-
-  // const singleVideo = async () => {
-  //   try {
-  //     const res = await axios.get(`/api/video/${videoId}`);
-  //     console.log(res.data);
-  //     setVideo(res.data);
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // };
-  // useEffect(() => {
-  //   singleVideo();
-  // }, [videoId]);
+  const { list, getLikedVideos, DeleteVideos } = useLike();
+  const { setModal, modal, playlist } = usePlaylist();
+  const showModal = () => {
+    
+    setModal(true) && <PlaylistModal />;
+  
+};
 
   useEffect(() => {
     async function singleVideo() {
-        try {
-            const res = await axios.get(`/api/video/${videoId}`)
-            console.log(res.data);
-  //     setVideo(res.data);
-        } catch (e) {
-            console.error(e);
-        }
-    };
+      try {
+        const res = await axios.get(`/api/video/${videoId}`);
+        console.log(res.data);
+        setVideo(res.data.video);
+      } catch (e) {
+        console.error(e);
+      }
+    }
     singleVideo();
-}, [videoId]);
+  }, [videoId]);
 
   return (
     <div className="flex flex-row gap-8 flex-wrap">
       <div className="w-2/3">
         <ReactPlayer
           controls
-          url={`https://www.youtube.com/watch?v=7vNQZEMgo4w&list=RD7vNQZEMgo4w&start_radio=1`}
+          url={`https://www.youtube.com/watch?v=${video.url}`}
           className="react-player"
           width="100%"
         />
-        <div className="text-justify">
-          Teri Mitti Female Version - Kesari | Arko feat. Parineeti Chopra |
-          Akshay Kumar | Manoj Muntashir
-        </div>
+        <div className="text-justify">{video.description}</div>
         <div className="flex flex-row gap-4 mt-4 justify-end cursor-pointer">
-          <BiLike size={30} />
-          <MdOutlinePlaylistAdd size={30} />
+          {list.some((p) => p.id === video.id) ? (
+            <button
+              className="text-sky-500 "
+              onClick={() => DeleteVideos(video)}
+            >
+              <BiLike size={30} />
+            </button>
+          ) : (
+            <button onClick={() => getLikedVideos(video)}>
+              <BiLike size={30} />
+            </button>
+          )}
+          
+          <div>
+          <div className="p-2">
+            <button
+              onClick={showModal}
+            >
+              <MdOutlinePlaylistAdd size={30} />
+            </button>
+          </div>
+          {modal && <PlaylistModal />}
+        </div>
         </div>
       </div>
       <div className=" w-80 shadow shadow-sky-500 rounded px-3 pt-6 pb-8 mb-4">
-<VideoNotes/>
+        <VideoNotes />
       </div>
-      
     </div>
   );
 };
