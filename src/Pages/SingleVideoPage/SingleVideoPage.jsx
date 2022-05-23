@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { singleVideo } from "../../utils/serverRequests";
 import ReactPlayer from "react-player";
 import { BiLike, MdOutlinePlaylistAdd } from "../../components/Icons/Icons";
 import { VideoNotes } from "../../components/VideoNotes/VideoNotes";
@@ -14,7 +13,7 @@ const SingleVideoPage = () => {
   const { videoId } = useParams();
   const [video, setVideo] = useState({});
   const { list, getLikedVideos, DeleteVideos } = useLike();
-  const { setModal, modal, playlist } = usePlaylist();
+  const { setModal, modal } = usePlaylist();
   const showModal = () => {
     
     setModal(true) && <PlaylistModal />;
