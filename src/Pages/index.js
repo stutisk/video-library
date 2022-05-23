@@ -8,6 +8,7 @@ import {Login} from "./Authpages/Login";
 import {Signup} from "./Authpages/Signup";
 import {Userpage} from "./Userpage/Userpage";
 import { Logout } from "./Authpages/Logout";
+import { SingleVideoPage } from "./SingleVideoPage/SingleVideoPage";
 
-export{Historypage,Homepage,Likedvideos, Playlist,Videolistingpage,Watchlater,Login,Signup,Userpage,Logout}
+export{SingleVideoPage,Historypage,Homepage,Likedvideos, Playlist,Videolistingpage,Watchlater,Login,Signup,Userpage,Logout}
 

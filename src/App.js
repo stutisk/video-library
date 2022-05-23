@@ -12,7 +12,8 @@ import {
   Login,
   Signup,
   Userpage,
-  Logout
+  Logout,
+  SingleVideoPage
 } from "./Pages/index";
 import { Pagenotfound } from "./Pages/Pagenotfound/Pagenotfound";
 import { RequiresAuth } from "./RequiresAuth/RequiresAuth";
@@ -40,6 +41,7 @@ function App() {
                   <Route path="/login" element={<Login />} />
                   <Route path="/signup" element={<Signup />} />
                   <Route path="/logout" element={<Logout />} />
+                  <Route path="/video/:videoId" element={<SingleVideoPage />} />
                   <Route path="/*" element={<Pagenotfound />} />
 
                   <Route
