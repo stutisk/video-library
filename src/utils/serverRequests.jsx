@@ -22,21 +22,10 @@ import axios from "axios";
         }
       }
     
-      const singleVideo = async (url,dispatch) => {
-        try {
-        
-           const res = await axios.get(url);
-           console.log(res.data.video)
-            dispatch({ type: "DISPLAY_VIDEO", payload: res.data.video });
-          
-        } catch (error) {
-          console.log(error);
-        }
-      };
       
       
 
    
  
 
-  export {getCategories,getVideos,singleVideo}
+  export {getCategories,getVideos}

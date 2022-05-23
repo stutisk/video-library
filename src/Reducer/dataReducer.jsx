@@ -8,10 +8,7 @@ const dataReducer = (state, action) => {
     }
     case "SELECT_CATEGORY":
       return { ...state, categorySelected: action.payload };
-    case "DISPLAY_VIDEO":
-      return {
-        ...state, currentVideo: action.payload,
-      };
+    
     default:
       return state;
   }
