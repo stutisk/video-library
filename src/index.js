@@ -8,6 +8,7 @@ import { DataProvider } from "./Context/dataContext";
 import { LikeProvider } from "./Context/LikeContext";
 import { WatchProvider } from "./Context/WatchContext";
 import {PlaylistProvider} from "./Context/PlaylistContext"
+import { HistoryProvider } from "./Context/HistoryContext";
 
 // Call make Server
 makeServer();
@@ -15,7 +16,7 @@ makeServer();
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-    
+    <HistoryProvider>
       <WatchProvider>
       <PlaylistProvider>
         <LikeProvider>
@@ -27,7 +28,7 @@ ReactDOM.render(
         </LikeProvider>
         </PlaylistProvider>
       </WatchProvider>
-      
+      </HistoryProvider>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")

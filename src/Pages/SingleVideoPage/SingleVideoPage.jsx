@@ -6,14 +6,20 @@ import { VideoNotes } from "../../components/VideoNotes/VideoNotes";
 import { useLike } from "../../Context/LikeContext";
 import { usePlaylist } from "../../Context/PlaylistContext";
 import { PlaylistModal } from "../../components/PlaylistModal/PlaylistModal";
-
 import axios from "axios";
+import { useHistory } from "../../Context/HistoryContext";
+
+
 
 const SingleVideoPage = () => {
+
+
   const { videoId } = useParams();
+
   const [video, setVideo] = useState({});
   const { list, getLikedVideos, DeleteVideos } = useLike();
   const { setModal, modal } = usePlaylist();
+  const {historyVideohandler} = useHistory()
   const showModal = () => {
     
     setModal(true) && <PlaylistModal />;
@@ -33,6 +39,8 @@ const SingleVideoPage = () => {
     singleVideo();
   }, [videoId]);
 
+ 
+
   return (
     <div className="flex flex-row gap-8 flex-wrap">
       <div className="w-2/3">
@@ -41,6 +49,7 @@ const SingleVideoPage = () => {
           url={`https://www.youtube.com/watch?v=${video.url}`}
           className="react-player"
           width="100%"
+         
         />
         <div className="text-justify">{video.description}</div>
         <div className="flex flex-row gap-4 mt-4 justify-end cursor-pointer">
