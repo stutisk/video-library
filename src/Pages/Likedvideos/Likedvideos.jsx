@@ -6,8 +6,6 @@ import { Videocards } from "../../components/Cards/Videocards";
 const Likedvideos = () => {
     const {list}=useLike();
    
-
-
   return (
     <div>
       <div className="text-slate-50 font-medium text-2xl"> VIDEOS IN THE LIST <span>{list.length}</span></div>

@@ -1,11 +1,13 @@
 import { usePlaylist } from "../../Context/PlaylistContext";
 import { useRef } from "react";
 import { MdOutlinePlaylistAdd } from "../../components/Icons/Icons";
+import { useData } from "../../Context/dataContext";
 
 const PlaylistModal = () => {
   const { setModal, createNewPlaylist, playlist, addVideo } = usePlaylist();
   const title = useRef();
   const description = useRef();
+  const {selectedvideo}=useData();
 
   const NewPlaylist = () => {
     createNewPlaylist({
@@ -52,8 +54,9 @@ const PlaylistModal = () => {
                         <div className="flex flex-row gap-5">
                           <span
                             onClick={() => {
-                             addVideo(playlist._id)
+                             addVideo(playlist._id,selectedvideo)
                               setModal(false)
+
                             }}
                             
                           >

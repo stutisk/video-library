@@ -29,6 +29,7 @@ const PlaylistProvider = ({ children }) => {
   };
 
   const addVideo = async (playlistId,requestBody) => {
+    console.log(requestBody)
     try {
       const res = await axios.post(
         `/api/user/playlists/${playlistId}`,
@@ -37,6 +38,7 @@ const PlaylistProvider = ({ children }) => {
           headers: { authorization: localStorage.getItem("token") },
         }
       );
+      notify("Video added to playlist");
       console.log(res.data.playlist.videos);
       setPlaylistOne(res.data.playlist.videos);
     } catch (error) {
