@@ -41,8 +41,9 @@ const SingleVideoPage = () => {
         <ReactPlayer
           controls
           url={`https://www.youtube.com/watch?v=${video.url}`}
-          className="react-player"
+          
           width="100%"
+          onPlay={()=>historyVideohandler(video)}
         />
         <div className="text-justify">{video.description}</div>
         <div className="flex flex-row gap-4 mt-4 justify-end cursor-pointer">
