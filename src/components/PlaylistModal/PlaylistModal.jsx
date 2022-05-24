@@ -95,7 +95,7 @@ const PlaylistModal = () => {
                   class="  inline-block px-6 py-2.5   text-slate-900 font-medium text-xl  bg-sky-500 rounded hover:bg-sky-600 "
                   onClick={() => {
                     NewPlaylist();
-                    setModal(false);
+                   
                   }}
                 >
                   CREATE
