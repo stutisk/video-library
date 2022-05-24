@@ -28,21 +28,25 @@ const PlaylistProvider = ({ children }) => {
     }
   };
 
-  const getPlaylist = async (playlistId) => {
+  const addVideo = async (playlistId,requestBody) => {
+    console.log(requestBody)
     try {
       const res = await axios.post(
         `/api/user/playlists/${playlistId}`,
-        
+        { video: requestBody },
         {
           headers: { authorization: localStorage.getItem("token") },
         }
       );
-      console.log("playlist",res.data.playlists.videos);
-      setPlaylistOne(res.data);
+      notify("Video added to playlist");
+      console.log(res.data.playlist.videos);
+      setPlaylistOne(res.data.playlist.videos);
     } catch (error) {
       console.log(error);
     }
   };
+ 
+ 
   
  const Playlist =async() => {
   try {
@@ -61,6 +65,8 @@ const PlaylistProvider = ({ children }) => {
  }
  useEffect(() => {
   Playlist(); 
+  addVideo();
+
 }, [])
  
 
@@ -87,11 +93,12 @@ const PlaylistProvider = ({ children }) => {
   const [modal, setModal] = useState(false);
   const [playlist, setPlaylist] = useState([]);
   const[oneplaylist,setPlaylistOne]=useState([])
+  console.log(oneplaylist)
 
  
 
   return (
-    <PlaylistContext.Provider value={{ oneplaylist,modal, setModal,createNewPlaylist,setPlaylist,playlist ,setPlaylistOne,getPlaylist,DeletePlaylist}}>
+    <PlaylistContext.Provider value={{ oneplaylist,modal, setModal,createNewPlaylist,setPlaylist,playlist ,setPlaylistOne,addVideo,DeletePlaylist}}>
       {children}
     </PlaylistContext.Provider>
   );

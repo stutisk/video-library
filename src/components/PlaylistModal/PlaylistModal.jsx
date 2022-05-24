@@ -1,11 +1,13 @@
 import { usePlaylist } from "../../Context/PlaylistContext";
 import { useRef } from "react";
-import {MdOutlinePlaylistAdd} from "../../components/Icons/Icons"
+import { MdOutlinePlaylistAdd } from "../../components/Icons/Icons";
+import { useData } from "../../Context/dataContext";
 
 const PlaylistModal = () => {
-  const { setModal, createNewPlaylist, playlist } = usePlaylist();
+  const { setModal, createNewPlaylist, playlist, addVideo } = usePlaylist();
   const title = useRef();
   const description = useRef();
+  const {selectedvideo}=useData();
 
   const NewPlaylist = () => {
     createNewPlaylist({
@@ -13,6 +15,7 @@ const PlaylistModal = () => {
       description: description.current.value,
     });
   };
+
 
   return (
     <div>
@@ -44,19 +47,29 @@ const PlaylistModal = () => {
             </button>
             <div class=" px-6  ">
               <div className="mt-5 overflow-y-auto h-20 ">
-            {playlist.length > 0 &&
-                playlist.map((playlist) => {
-                  return (
-                    <div className="mt-3 border border-sky-500 w-60  ">
-                      
-                      <div  className="flex flex-row gap-5"><span><MdOutlinePlaylistAdd size={32}/></span>
-                       {playlist.title}</div>
-                    </div>
-                  );
-                })}
-                </div>
+                {playlist.length > 0 &&
+                  playlist.map((playlist) => {
+                    return (
+                      <div className="mt-3 border border-sky-500 w-60  ">
+                        <div className="flex flex-row gap-5">
+                          <span
+                            onClick={() => {
+                             addVideo(playlist._id,selectedvideo)
+                              setModal(false)
+
+                            }}
+                            
+                          >
+                            <MdOutlinePlaylistAdd size={32} />
+                          </span>
+                          {playlist.title}
+                        </div>
+                      </div>
+                    );
+                  })}
+              </div>
               <form class="space-y-6" action="#">
-               <h4>Add to Playlists</h4>
+                <h4>Add to Playlists</h4>
                 <div>
                   <label
                     for="Title"
@@ -95,7 +108,6 @@ const PlaylistModal = () => {
                   class="  inline-block px-6 py-2.5   text-slate-900 font-medium text-xl  bg-sky-500 rounded hover:bg-sky-600 "
                   onClick={() => {
                     NewPlaylist();
-                   
                   }}
                 >
                   CREATE

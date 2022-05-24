@@ -1,5 +1,5 @@
 import { dataReducer } from "../Reducer/dataReducer";
-import { createContext, useContext } from "react";
+import { createContext, useContext,useState } from "react";
 import { useReducer,useEffect} from "react";
 import {getCategories,getVideos} from "../utils//serverRequests";
 
@@ -16,7 +16,7 @@ const initialState = {
 
 const DataProvider = ({ children }) => {
   const [state, dispatch] = useReducer(dataReducer, initialState);
-  
+  const [selectedvideo,setSelectedvideo]=useState([])
   console.log(state)
 
   useEffect(() => {
@@ -26,7 +26,7 @@ const DataProvider = ({ children }) => {
   }, []);
 
   return (
-    <DataContext.Provider value={{state,dispatch }}>
+    <DataContext.Provider value={{state,dispatch ,selectedvideo,setSelectedvideo}}>
       {children}
     </DataContext.Provider>
   );

@@ -9,6 +9,7 @@ import {Signup} from "./Authpages/Signup";
 import {Userpage} from "./Userpage/Userpage";
 import { Logout } from "./Authpages/Logout";
 import { SingleVideoPage } from "./SingleVideoPage/SingleVideoPage";
+import { SinglePlaylist } from "./Playlist/SinglePlaylist";
 
-export{SingleVideoPage,Historypage,Homepage,Likedvideos, Playlist,Videolistingpage,Watchlater,Login,Signup,Userpage,Logout}
+export{SinglePlaylist,SingleVideoPage,Historypage,Homepage,Likedvideos, Playlist,Videolistingpage,Watchlater,Login,Signup,Userpage,Logout}
 

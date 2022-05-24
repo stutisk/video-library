@@ -6,19 +6,21 @@ import { VideoNotes } from "../../components/VideoNotes/VideoNotes";
 import { useLike } from "../../Context/LikeContext";
 import { usePlaylist } from "../../Context/PlaylistContext";
 import { PlaylistModal } from "../../components/PlaylistModal/PlaylistModal";
-
+import { useData } from "../../Context/dataContext";
 import axios from "axios";
+import { useHistory } from "../../Context/HistoryContext";
 
 const SingleVideoPage = () => {
   const { videoId } = useParams();
+
   const [video, setVideo] = useState({});
   const { list, getLikedVideos, DeleteVideos } = useLike();
   const { setModal, modal } = usePlaylist();
+  const { historyVideohandler } = useHistory();
+  const { setSelectedvideo } = useData();
   const showModal = () => {
-    
     setModal(true) && <PlaylistModal />;
-  
-};
+  };
 
   useEffect(() => {
     async function singleVideo() {
@@ -39,8 +41,9 @@ const SingleVideoPage = () => {
         <ReactPlayer
           controls
           url={`https://www.youtube.com/watch?v=${video.url}`}
-          className="react-player"
+          
           width="100%"
+          onPlay={()=>historyVideohandler(video)}
         />
         <div className="text-justify">{video.description}</div>
         <div className="flex flex-row gap-4 mt-4 justify-end cursor-pointer">
@@ -56,17 +59,20 @@ const SingleVideoPage = () => {
               <BiLike size={30} />
             </button>
           )}
-          
+
           <div>
-          <div className="p-2">
-            <button
-              onClick={showModal}
-            >
-              <MdOutlinePlaylistAdd size={30} />
-            </button>
+            <div className="p-2">
+              <button
+                onClick={() => {
+                  showModal()
+                  setSelectedvideo(video);
+                }}
+              >
+                <MdOutlinePlaylistAdd size={30} />
+              </button>
+            </div>
+            {modal && <PlaylistModal />}
           </div>
-          {modal && <PlaylistModal />}
-        </div>
         </div>
       </div>
       <div className=" w-80 shadow shadow-sky-500 rounded px-3 pt-6 pb-8 mb-4">
