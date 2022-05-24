@@ -1,3 +1,27 @@
-## Video Library Backend
 
-This folder contains the Mock Backend created for Video Library App. It contains different API end-points and database configuration for building Video Library; so that you can focus on building Frontend.
+# galaxiaGana
+
+
+## About galaxiaGana
+
+lets you play your favourite Music
+
+## Tech Stack and Tools
+
+- React JS
+- React Router v6
+- React Context API + useReducer
+- TailWind CSS
+- Backend setup using [MockBee](https://mockbee.netlify.app/)
+- React-toastify for Toasts
+- Cloudinary for Hosting of Images
+
+---
+
+## Live Deployment
+
+Checkout the live deployment here: [Galaxiagana](https://galaxiagana.netlify.app/)
+
+
+
+
