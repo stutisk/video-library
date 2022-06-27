@@ -1,6 +1,6 @@
 
 
-import { FiLogIn, MdNotifications,FaUserAlt } from "../Icons/Icons";
+import { MdNotifications,FaUserAlt } from "../Icons/Icons";
 
 import { Link } from "react-router-dom";
 function Navbar() {
