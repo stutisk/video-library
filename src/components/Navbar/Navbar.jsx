@@ -48,14 +48,7 @@ function Navbar() {
             <li className=" text-slate-50 hover:text-sky-500">
               <MdNotifications size={26} />
             </li>
-            <Link to="/login">
-            <li className="text-slate-50 hover:text-sky-500">
-              <FiLogIn size={26} />
-            </li>
-            </Link>
-
           
-
 
             <Link to="/userpage">
             <li className="text-slate-50 hover:text-sky-500">
