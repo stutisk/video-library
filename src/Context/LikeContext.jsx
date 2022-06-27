@@ -6,10 +6,9 @@ const notify = (message) => {
   toast(message)   
 }
 
-
 const LikeContext = createContext();
 const useLike = () => useContext(LikeContext);
-console.log("hey");
+
 const LikeProvider = ({ children }) => {
 
   const getLikedVideos = async (requestBody) => {

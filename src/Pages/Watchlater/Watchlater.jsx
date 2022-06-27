@@ -5,7 +5,7 @@ function Watchlater() {
     const {watchList} =useWatch();
     return (
         <div>
-          <div className="text-slate-50 font-medium text-2xl"> VIDEOS IN THE WATCHLIST <span>{watchList.length}</span></div>
+          <div className="text-slate-50 font-medium text-2xl"> VIDEOS IN THE WATCHLIST : <span>{watchList.length}</span></div>
              {watchList.length > 0 ?(
                 <div className="flex flex-row flex-wrap  gap-10 p-4 justify-center ">
                   {watchList.map((video) => (

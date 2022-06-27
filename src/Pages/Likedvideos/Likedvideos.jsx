@@ -8,7 +8,7 @@ const Likedvideos = () => {
    
   return (
     <div>
-      <div className="text-slate-50 font-medium text-2xl"> VIDEOS IN THE LIST <span>{list.length}</span></div>
+      <div className="text-slate-50 font-medium text-2xl"> VIDEOS IN THE LIST : <span>{list.length}</span></div>
          {list.length > 0 ?(
             <div className="flex flex-row flex-wrap  gap-10 p-4 justify-center ">
               {list.map((video) => (

@@ -8,7 +8,7 @@ const notify = (message) => {
 
 const PlaylistContext = createContext();
 const usePlaylist = () => useContext(PlaylistContext);
-console.log("hey");
+
 const PlaylistProvider = ({ children }) => {
 
   const createNewPlaylist = async (requestBody) => {
