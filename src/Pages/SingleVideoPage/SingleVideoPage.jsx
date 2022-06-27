@@ -16,7 +16,7 @@ const SingleVideoPage = () => {
   const [video, setVideo] = useState({});
   const { list, getLikedVideos, DeleteVideos } = useLike();
   const { setModal, modal } = usePlaylist();
-  const { historyVideohandler } = useHistory();
+  const { addVideoInHistory } = useHistory();
   const { setSelectedvideo } = useData();
   const showModal = () => {
     setModal(true) && <PlaylistModal />;
@@ -43,7 +43,7 @@ const SingleVideoPage = () => {
           url={`https://www.youtube.com/watch?v=${video.url}`}
           
           width="100%"
-          onPlay={()=>historyVideohandler(video)}
+          onPlay={()=>addVideoInHistory(video)}
         />
         <div className="text-justify">{video.description}</div>
         <div className="flex flex-row gap-4 mt-4 justify-end cursor-pointer">

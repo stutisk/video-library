@@ -7,6 +7,7 @@ const HistoryContext = createContext();
 const useHistory = () => useContext(HistoryContext);
 
 const HistoryProvider = ({ children }) => {
+  
   useEffect(() => {
     async function history() {
       try {
