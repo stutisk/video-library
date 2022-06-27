@@ -56,7 +56,7 @@ const Login = () => {
     } else if (isLogin) {
       navigate("/");
     }
-  }, [isLogin,location.state.from.pathname,navigate]);
+  }, []);
   return (
     <section className="pl-60 pt-5">
       <div className="w-full max-w-sm ">

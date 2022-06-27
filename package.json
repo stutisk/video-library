@@ -6,6 +6,7 @@
     "axios": "^0.27.2",
     "dayjs": "^1.11.2",
     "dotenv": "^16.0.1",
+    "eslint-plugin-react-hooks": "^4.7.0-next-955cad9bc-20220623",
     "jsonwebtoken": "^8.5.1",
     "jwt-decode": "^3.1.2",
     "jwt-encode": "^1.0.1",

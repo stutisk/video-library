@@ -54,7 +54,7 @@ useEffect(() => {
   } else if (isLogin) {
     navigate("/");
   }
-}, []);
+}, [isLogin,navigate]); 
 
   return (
       <section className="pl-60 ">
@@ -146,7 +146,7 @@ useEffect(() => {
         </div>
        
         <div>
-             <Link to ="/login"
+             <Link to = "/login"
             className=" flex gap-2  place-content-center  text-xl text-slate-50 p-2"
             href="#"
           >
