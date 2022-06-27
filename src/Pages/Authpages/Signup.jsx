@@ -54,7 +54,7 @@ useEffect(() => {
   } else if (isLogin) {
     navigate("/");
   }
-}, [isLogin,navigate]);
+}, []);
 
   return (
       <section className="pl-60 ">
