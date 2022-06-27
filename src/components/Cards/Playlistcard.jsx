@@ -9,7 +9,7 @@ const Playlistcard = ({ playlist }) => {
   return (
     <div>
       <div className="  w-72  border-2 border-sky-500   shadow shadow-sky-500 rounded px-1 pt-6 pb-6 mb-4 ">
-        <button onClick={() => navigate(`/playlist/${playlist._id}`)}>
+        <button onClick={() => navigate(`/playlist/${playlist._id}/${playlist.title}`)}>
           <MdOutlinePlaylistAdd size={80} />
         </button>
         <h1>Add Videos</h1>

@@ -85,7 +85,7 @@ function App() {
                     }
                   />
                   <Route
-                    path="/playlist/:playlistId"
+                    path="/playlist/:playlistId/:playlistName"
                     element={
                       <RequiresAuth>
                         <SinglePlaylist />
