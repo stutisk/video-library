@@ -75,9 +75,10 @@ const SingleVideoPage = () => {
           </div>
         </div>
       </div>
-      <div className=" w-80 shadow shadow-sky-500 rounded px-3 pt-6 pb-8 mb-4">
+      {/* wip */}
+      {/* <div className=" w-80 shadow shadow-sky-500 rounded px-3 pt-6 pb-8 mb-4">
         <VideoNotes />
-      </div>
+      </div> */}
     </div>
   );
 };

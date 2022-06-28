@@ -10,6 +10,7 @@ function Navbar() {
         <div className="search-container">
           <div class="flex ">
             <div class="mb-3 w-96">
+              {/* Wip */}
               {/* <div class="input-group relative flex items-stretch w-full mb-4">
                 <input
                   type="search"

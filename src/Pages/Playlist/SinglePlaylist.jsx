@@ -1,9 +1,12 @@
 import { usePlaylist } from "../../Context/PlaylistContext";
-import { Videocards } from "../../components/Cards/Videocards";
+import { Playlistvideocard } from "../../components/Cards/Playlistvideocard";
 import { NavLink, useParams } from "react-router-dom";
 const SinglePlaylist = () => {
-  const { oneplaylist, playlist } = usePlaylist();
+  const { oneplaylist} = usePlaylist();
   const { playlistId, playlistName } = useParams();
+
+
+
 
   return (
     <div>
@@ -12,7 +15,7 @@ const SinglePlaylist = () => {
       {oneplaylist.length > 0 ? (
         <div className="flex flex-row flex-wrap  gap-10 p-4 justify-center ">
           {oneplaylist.map((videos) => (
-            <Videocards
+            <Playlistvideocard
               key={videos._id}
               video={videos}
               playlistId={playlistId}
