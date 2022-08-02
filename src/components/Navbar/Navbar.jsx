@@ -46,9 +46,9 @@ function Navbar() {
         </div>
         <div className="buttons ">
           <ul className="cursor-pointer text-slate-400 font-medium text-xl flex flex-row gap-4 ">
-            <li className=" text-slate-50 hover:text-sky-500">
+            {/* <li className=" text-slate-50 hover:text-sky-500">
               <MdNotifications size={26} />
-            </li>
+            </li> */}
           
 
             <Link to="/userpage">

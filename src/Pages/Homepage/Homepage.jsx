@@ -1,5 +1,5 @@
 import {Categorycard} from "../../components/Cards/Categorycard"
-
+import { Link } from "react-router-dom";
 function Homepage() {
   
   return (
@@ -14,13 +14,15 @@ function Homepage() {
             />
           </div>
           <div className="absolute bottom-1 inset-x-1/4  p-2">
-            
+          <Link to ="/videoList">
           <button
+        
               type="button"
               class="  inline-block px-6 py-2.5   text-slate-900 font-medium text-xl  bg-sky-500 rounded hover:bg-sky-600  focus:ring-0 transition duration-150 ease-in-out"
             >
             EXPLORE NOW
             </button>
+            </Link>
           </div>
         </header>
         <div className="text-slate-50  ">
