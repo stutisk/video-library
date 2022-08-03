@@ -9,7 +9,7 @@ const Categorycard = () => {
   } = useData();
 
   return (
-    <div className="flex flex-row flex-wrap  gap-10 p-4 justify-center ">
+    <div className="flex flex-row flex-wrap  gap-10 p-4 ">
       {categories.map((category) => {
         return (
           <Link to="videoList">
