@@ -17,7 +17,7 @@ const initialState = {
 const DataProvider = ({ children }) => {
   const [state, dispatch] = useReducer(dataReducer, initialState);
   const [selectedvideo,setSelectedvideo]=useState([])
-  console.log(state)
+
 
   useEffect(() => {
     getCategories(dispatch);

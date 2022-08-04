@@ -28,7 +28,6 @@ const PlaylistProvider = ({ children }) => {
   };
 
   const addVideo = async (playlistId, requestBody) => {
-    
     try {
       const res = await axios.post(
         `/api/user/playlists/${playlistId}`,
@@ -38,8 +37,7 @@ const PlaylistProvider = ({ children }) => {
         }
       );
       notify("Video added to playlist");
-      console.log(res.data);
-      setPlaylistOne(res.data.playlist.videos);
+      setPlaylistOne(res.data.playlist.videos.reverse());
     } catch (error) {
       console.log(error);
     }
@@ -54,7 +52,7 @@ const PlaylistProvider = ({ children }) => {
           headers: { authorization: localStorage.getItem("token") },
         }
       );
-      console.log("Playlist", res.data);
+
       setPlaylist(res.data);
     } catch (error) {
       console.log(error);
@@ -82,8 +80,7 @@ const PlaylistProvider = ({ children }) => {
     }
   };
 
- 
-  const DeleteVideoFromPlaylist= (playlistId, videoId) => {
+  const DeleteVideoFromPlaylist = (playlistId, videoId) => {
     if (localStorage.getItem("token")) {
       (async () => {
         try {
@@ -93,7 +90,7 @@ const PlaylistProvider = ({ children }) => {
               headers: { authorization: localStorage.getItem("token") },
             }
           );
-          console.log(res.data)
+          console.log(res.data);
           setPlaylistOne(res.data.playlist.videos);
         } catch (error) {
           console.log(error);
@@ -105,7 +102,6 @@ const PlaylistProvider = ({ children }) => {
   const [modal, setModal] = useState(false);
   const [playlist, setPlaylist] = useState([]);
   const [oneplaylist, setPlaylistOne] = useState([]);
-  console.log(oneplaylist);
 
   return (
     <PlaylistContext.Provider
@@ -119,7 +115,7 @@ const PlaylistProvider = ({ children }) => {
         setPlaylistOne,
         addVideo,
         DeletePlaylist,
-        DeleteVideoFromPlaylist
+        DeleteVideoFromPlaylist,
       }}
     >
       {children}
