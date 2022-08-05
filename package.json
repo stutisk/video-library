@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@tailwindcss/line-clamp": "^0.4.0",
     "axios": "^0.27.2",
     "dayjs": "^1.11.2",
     "dotenv": "^16.0.1",
