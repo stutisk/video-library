@@ -8,7 +8,7 @@ function Homepage() {
         <header className="relative ">
           <div className="h-96 ">
             <img
-              src="https://legacy.npr.org/news/graphics/2014/12/tape.gif"
+              src="https://res.cloudinary.com/dvbw8xujd/image/upload/v1659517812/g7tvkapzsaaakpdbo4ev.gif"
               className=" rounded-lg w-full h-96 bg-cover opacity-  "
               alt="banner-hero"
             />
