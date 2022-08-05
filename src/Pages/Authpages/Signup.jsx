@@ -29,7 +29,7 @@ const signupHandler = async() => {
     });
     setLogin(true);
     notify("Signup Successful");
-    console.log(response);
+
     const userDetail = {
       Email: response.data.createdUser.email,
       name:
