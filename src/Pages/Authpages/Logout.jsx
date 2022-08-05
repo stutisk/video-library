@@ -1,5 +1,5 @@
  
 const Logout = () => {
-  return <div>YOU HAVE BEEN SUCCESSFULLY LOGGED OUT</div>;
+  return <div>You have successfully been logged out</div>;
 };
 export { Logout };

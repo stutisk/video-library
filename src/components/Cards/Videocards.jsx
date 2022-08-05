@@ -27,7 +27,7 @@ const Videocards = ({ video }) => {
          
             onClick={() => navigate(`/video/${video._id}`)}/>
         </div>
-        <div className="flex p-2 gap-3">
+        <div className="flex p-2 gap-3  ">
           <div>
 
             <img className="  rounded-full" src={video.creator} alt={video.categoryName}/>
@@ -36,7 +36,7 @@ const Videocards = ({ video }) => {
           </div>
           <div>
             {" "}
-            <p className=" tracking-wide text-base text-left">{video.title}</p>
+            <p className="   tracking-wide text-base text-left">{video.title}</p>
           </div>
           <div className="flex gap-2">
             {list.some((p) => p.id === video.id) ? (
@@ -67,8 +67,9 @@ const Videocards = ({ video }) => {
           </div>
         </div>
         <div className="flex place-content-between tracking-wide text-base">
-          <div>{video.views}views</div>
+          <div>{video.views} views</div>
           <div>{video.date}</div>
+          
         </div>
       </div>
     

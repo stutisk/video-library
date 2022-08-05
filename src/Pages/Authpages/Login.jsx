@@ -44,8 +44,8 @@ const Login = () => {
     }
   };
   const guestLogin = () => {
-    useremail.current.value = "adarshbalika@gmail.com";
-    userpass.current.value = "adarshBalika123";
+    useremail.current.value = "StutiSk@gmail.com";
+    userpass.current.value = "StutiSk123";
     loginHandler();
 
     console.log(useremail.current.value);
@@ -102,11 +102,11 @@ const Login = () => {
               LOGIN AS GUEST
             </button>
           </div>
-          <div>
+          {/* <div>
             <Link to="" className="inline-block   text-xl text-green-700  p-2">
               Forgot Password?
             </Link>
-          </div>
+          </div> */}
           <div>
             <Link
               to="/signup"

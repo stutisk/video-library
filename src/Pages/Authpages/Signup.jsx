@@ -29,7 +29,7 @@ const signupHandler = async() => {
     });
     setLogin(true);
     notify("Signup Successful");
-    console.log(response);
+
     const userDetail = {
       Email: response.data.createdUser.email,
       name:
@@ -130,7 +130,7 @@ useEffect(() => {
           <input
             className="shadow appearance-none border  rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
             id=" confirmpassword"
-            type="confirmpassword"
+            type="password"
             placeholder="**********"
            
           />

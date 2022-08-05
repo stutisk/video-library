@@ -10,7 +10,7 @@ export const videos = [
     creator:
       "https://res.cloudinary.com/dvbw8xujd/image/upload/v1652634336/Chill_creator_qapxan.jpg",
     title: "Best Travelling Songs | Bollywood",
-    views:"5307547",
+    views:"53K",
     date: "Mar 25, 2022 ",
     description:"Non-Stop Road Trip Jukebox | SICKVED | Best Travelling Songs | Bollywood"
 
@@ -24,7 +24,7 @@ export const videos = [
     creator:
       "https://res.cloudinary.com/dvbw8xujd/image/upload/v1652635111/chill2_creator_visoxw.jpg",
     title: "Pasoori ,Coke Studio  Ali Sethi x Shae Gill",
-    views:"119,897,640",
+    views:"120K",
     date: " Feb 7, 2022 ",
     description:"Coke Studio | Season 14 | Pasoori | Ali Sethi x Shae Gill"
 
@@ -37,8 +37,8 @@ export const videos = [
       "https://res.cloudinary.com/dvbw8xujd/image/upload/v1652635708/workout1_f2kb4k.webp",
     creator:
       "https://res.cloudinary.com/dvbw8xujd/image/upload/v1652635706/w-2_c_jaztgy.jpg",
-    title: "Top workout songs |Hindi | Gym motivation ",
-    views:"9,019,828",
+    title: "Top workout songs | Hindi music",
+    views:"9M",
     date: "Aug 21, 2020 ",
     description:"Best workout music | Top workout songs | Gym motivation songs"
 
@@ -52,7 +52,7 @@ export const videos = [
     creator:
       "https://res.cloudinary.com/dvbw8xujd/image/upload/v1652635707/w-1_c_mev7zg.jpg",
     title: "Best workout songs| English music",
-    views:"53,746,537",
+    views:"2M",
     date: "Dec 28, 2018 ",
     description:"Top motivational songs| Best workout songs| English music |Hollywood songs| December 2018🔥"
 
@@ -64,9 +64,9 @@ export const videos = [
     image:
       "https://res.cloudinary.com/dvbw8xujd/image/upload/v1652636190/f-1_ssakqa.webp",
     creator:
-      "https://res.cloudinary.com/dvbw8xujd/image/upload/v1652636190/fc2_r8gjn4.jpg",
-    title: "Ambient Study Music To Concentrate",
-    views:"53,746,537",
+      "https://res.cloudinary.com/dvbw8xujd/image/upload/c_scale,h_48/v1652636190/fc2_r8gjn4.jpg",
+    title: "Ambient Study Music ",
+    views:"5M",
     date: "Dec 28, 2018 ",
     description:"Ambient Study Music To Concentrate - 4 Hours of Music for Studying, Concentration and Memory"
 
@@ -78,9 +78,9 @@ export const videos = [
     image:
       "https://res.cloudinary.com/dvbw8xujd/image/upload/v1652636190/f2_l0p2k7.webp",
     creator:
-      "https://res.cloudinary.com/dvbw8xujd/image/upload/v1652636190/fc1_tzmngl.jpg",
+      "https://res.cloudinary.com/dvbw8xujd/image/upload/c_scale,h_48/v1652636190/fc1_tzmngl.jpg",
     title: "Focus Music for Work and Studying",
-    views:"53,746,537",
+    views:"5M",
     date: "Dec 28, 2018 ",
     description:"Focus Music for Work and Studying, Background Music for Concentration, Study Music"
 
@@ -94,7 +94,7 @@ export const videos = [
     creator:
       "https://res.cloudinary.com/dvbw8xujd/image/upload/v1652636455/fg-cr_a3af5g.jpg",
     title: "Songs to put you in a better mood",
-    views:"53,746,537",
+    views:"3M",
     date: "Dec 28, 2018 ",
     description:"Songs to put you in a better mood ~ A feeling good mix"
 
@@ -108,7 +108,7 @@ export const videos = [
     creator:
       "https://res.cloudinary.com/dvbw8xujd/image/upload/v1652636807/sc_dlv84j.jpg",
     title: "Relaxing Sleep Music + Insomnia",
-    views:"53,746,537",
+    views:"4M",
     date: "Dec 28, 2018 ",
     description:"Relaxing Sleep Music + Insomnia - Stress Relief, Relaxing Music, Deep Sleeping Music"
 
@@ -120,9 +120,9 @@ export const videos = [
     image:
       "https://res.cloudinary.com/dvbw8xujd/image/upload/v1652636661/hq720_q1rklh.webp",
     creator:
-      "https://res.cloudinary.com/dvbw8xujd/image/upload/v1652636190/fc1_tzmngl.jpg",
+      "https://res.cloudinary.com/dvbw8xujd/image/upload/c_scale,h_48/v1652636190/fc1_tzmngl.jpg",
     title: "Party Songs Audio Jukebox",
-    views:"53,746,537",
+    views:"5M",
     date: "Dec 28, 2018 ",
     description:"Party Songs Audio Jukebox - Chandigarh Mein, Kala Chashma, Hook Up Song, Pallo Latke| Happy New Year"
 

@@ -43,7 +43,7 @@ function Playlist() {
           <h1>there are no playlists</h1>
         </div>
       )}
-      {/* <Playlistcard /> */}
+
     </div>
   );
 }
