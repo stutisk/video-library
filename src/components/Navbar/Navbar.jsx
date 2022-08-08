@@ -1,12 +1,12 @@
-import { MdNotifications, FaUserAlt } from "../Icons/Icons";
+import { FaUserAlt } from "../Icons/Icons";
 
 import { NavLink } from "react-router-dom";
 function Navbar() {
-  
   const activeStyle = {
     color: "#0ea5e9",
     fontWeight: "bold",
   };
+
   return (
     <nav className=" ">
       <div className="flex flex-row py-3 justify-between">
@@ -49,10 +49,6 @@ function Navbar() {
         </div>
         <div className="buttons ">
           <ul className="cursor-pointer text-slate-400 font-medium text-xl flex flex-row gap-4 ">
-            {/* <li className=" text-slate-50 hover:text-sky-500">
-              <MdNotifications size={26} />
-            </li> */}
-
             <NavLink
               to="/userpage"
               style={({ isActive }) => (isActive ? activeStyle : undefined)}

@@ -92,6 +92,18 @@ function Sidebar() {
               History
             </li>
           </NavLink>
+          {/* <NavLink
+            to="/notes"
+            style={({ isActive }) => (isActive ? activeStyle : undefined)}
+          >
+            <li className="py-4 flex flex-row gap-4 cursor-pointer  group hover:text-slate-50">
+              {" "}
+              <span className="group-hover:bg-sky-500 rounded-lg p-1">
+                <MdOutlineHistory size={26} />
+              </span>{" "}
+              VideoNotes
+            </li>
+          </NavLink> */}
         </ul>
       </div>
     </div>

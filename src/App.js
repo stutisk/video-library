@@ -20,6 +20,7 @@ import { Pagenotfound } from "./Pages/Pagenotfound/Pagenotfound";
 import { RequiresAuth } from "./RequiresAuth/RequiresAuth";
 import { ToastContainer } from 'react-toastify';
 import "react-toastify/ReactToastify.min.css";
+import { VideoNotes } from "./Pages/VideoNotes/VideoNotes";
 
 function App() {
   return (
@@ -97,6 +98,14 @@ function App() {
                     element={
                       <RequiresAuth>
                         <SingleVideoPage />
+                      </RequiresAuth>
+                    }
+                  />
+                   <Route
+                    path="/notes"
+                    element={
+                      <RequiresAuth>
+                        <VideoNotes />
                       </RequiresAuth>
                     }
                   />
