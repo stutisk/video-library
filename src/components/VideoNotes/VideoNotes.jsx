@@ -3,8 +3,7 @@ import { useRef, useState } from "react";
 const VideoNotes = () => {
   const notesdesciption = useRef();
   const [notes, setNotes] = useState([]);
-  
-  
+
   let AddedNotes = "";
   const clearInput = () => (notesdesciption.current.value = "");
   const addNotes = () => {
@@ -48,28 +47,37 @@ const VideoNotes = () => {
       </div>
 
       <div>
-        {notes.slice(0).reverse()
-        .map((item) => {
-          return (
-            <div
-              className="
-             w-full
-             py-1.5
-             text-base
-             font-normal
-             text-gray-50
-             bg-slate-900 bg-clip-padding
-             border border-solid border-gray-300
-             rounded
-             transition
-             ease-in-out
-             mt-2
-             "
-            >
-              {item}
-            </div>
-          );
-        })}
+        {notes.length > 0 ? (
+          <div>
+          {" "}
+          {notes
+            .slice(0)
+            .reverse()
+            .map((item) => {
+              return (
+                <div
+                  className="
+           w-full
+           py-1.5
+           text-base
+           font-normal
+           text-gray-50
+           bg-slate-900 bg-clip-padding
+           border border-solid border-gray-300
+           rounded
+           transition
+           ease-in-out
+           mt-2
+           "
+                >
+                  {item}
+                </div>
+              );
+            })}
+        </div>
+        ) : (
+        <div>Add Notes to the Video</div>
+        )}
       </div>
     </div>
   );
